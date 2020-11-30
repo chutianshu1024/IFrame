@@ -1,0 +1,55 @@
+apply from: "config.gradle"
+
+buildscript {
+    //使用这种统一的依赖定义,ide会主动提示版本升级,如果放在config.gradle ide就不会主动提示版本升级
+    ext.kotlin_version = '1.4.20'
+//    //数据库版本
+//    ext.objectboxVersion = '2.1.0'
+
+    ext {
+        //测试模块1 是否单独运行
+        moduleTest1IsAlone = true
+        //测试模块2 是否单独运行
+        moduleTest2IsAlone = false
+    }
+
+    //仓库
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
+        mavenCentral()
+        maven { url "https://clojars.org/repo/" } //icepick配置
+        maven { url "https://jitpack.io" }
+        google()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-noarg:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlin_version"
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+    }
+}
+
+//所有项目都依赖于以下中央仓库
+allprojects {
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
+        flatDir {
+            dirs '../lib_project/libs'
+        }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        mavenCentral()
+        maven { url "https://clojars.org/repo/" } //icepick配置
+        maven { url "https://jitpack.io" }
+        google()
+    }
+}
+
+//gradle在执行构建任务时的清理配置
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,25 @@
+<manifest package="com.cts.framework.core">
+
+<!--    &lt;!&ndash;允许应用程序从外部存储读取。&ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+<!--    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+<!--    &lt;!&ndash;网络请求权限&ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>-->
+<!--    &lt;!&ndash;wifi&ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+<!--    &lt;!&ndash;允许应用程序安装软件包&ndash;&gt;-->
+<!--    <permission android:name="android.permission.INSTALL_PACKAGES" />-->
+
+
+<!--    &lt;!&ndash;调整系统亮度 6.0危险权限&ndash;&gt;-->
+<!--    &lt;!&ndash;<uses-permission android:name="android.permission.WRITE_SETTINGS"/>&ndash;&gt;-->
+<!--    &lt;!&ndash;网络请求权限&ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.INTERNET"/>-->
+<!--    &lt;!&ndash;允许应用程序读取或写入系统设置&ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />-->
+<!--    <uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+<!--    &lt;!&ndash;相机权限&ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.CAMERA"/>-->
+
+
+</manifest>

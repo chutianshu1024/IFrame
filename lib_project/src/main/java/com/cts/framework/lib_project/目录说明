@@ -1,0 +1,16 @@
+lib_project目录介绍
+
+arouter 所有路由中心
+event 所有事件中心
+source 数据提供中心
+    -bean：实体类
+    -local：本地数据提供者
+        -disk：磁盘存储（或者其他固化存储）
+        -memory：内存存储（即缓存，生命周期于app一致）
+
+    -remote:网络数据提供者
+        -netutils：工具类
+        -各个Source类：网络数据提供者，在这里面调用接口获取数据
+
+view 官方view配置等相关
+widget 纯自定义小控件

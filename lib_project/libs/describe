@@ -1,0 +1,5 @@
+1.alipaySdk-15.6.5-20190718211148 支付宝
+2.umeng-common-2.1.0 友盟核心库
+3.umeng-share 都是友盟分享相关
+4.libapshare20161108、libddshare 阿里和钉钉分享相关，和上面是一起用的
+5.tbs_sdk_thirdapp_v4.3.0.1148_43697_sharewithdownloadwithfile_withoutGame_obfs_20190805_175505  腾讯x5浏览器内核

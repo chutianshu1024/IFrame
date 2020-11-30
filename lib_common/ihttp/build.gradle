@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.github.dcendents.android-maven'
+
+def cfg = rootProject.ext.android
+def dependVersion = rootProject.ext.dependVersion
+
+android {
+    compileSdkVersion cfg.compileSdkVersion
+    buildToolsVersion cfg.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion cfg.minSdkVersion
+        targetSdkVersion cfg.targetSdkVersion
+        versionCode 2
+        versionName "1.01"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$dependVersion.kotlinx_coroutines"
+
+    implementation "com.squareup.retrofit2:retrofit:$dependVersion.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$dependVersion.retrofit"
+
+    //磁盘缓存
+    implementation "com.jakewharton:disklrucache:$dependVersion.disklrucache"
+
+    //lifecycle
+    api "androidx.lifecycle:lifecycle-extensions:${dependVersion.lifecycle_extensions}"
+}

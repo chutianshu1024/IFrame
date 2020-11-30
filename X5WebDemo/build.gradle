@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "28.0.3"
+    defaultConfig {
+        applicationId "com.example.test_webview_demo"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        // Specifies the ABI configurations of your native
+        // libraries Gradle should build and package with your APK.
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //android studio默认so文件加载目录为:src/main/jniLibs
+    //如在module的build.gradle按照如下方式,自定义了so文件加载目录请确保对应目录下只有armeabi目录
+    //    sourceSets {
+    //        main{
+    //            jniLibs.srcDirs = ['libs']
+    //        }
+    //    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    compile 'com.android.support:appcompat-v7:29+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+}
+
+//所有项目都依赖于以下中央仓库
+allprojects {
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
+        flatDir {
+            dirs '../lib_project/libs'
+        }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        mavenCentral()
+        maven { url "https://clojars.org/repo/" } //icepick配置
+        maven { url "https://jitpack.io" }
+        google()
+    }
+}

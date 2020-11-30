@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--app主色-蓝色-->
+    <color name="colorPrimary">#28a1ff</color>
+    <!--主色的文本颜色-->
+    <color name="colorPrimaryText">#28a1ff</color>
+    <!--主色的控件颜色-->
+    <color name="colorPrimaryWidget">#28a1ff</color>
+    <!--主色深一点的颜色-->
+    <color name="colorPrimaryDark">#1990ec</color>
+    <!--按钮选中颜色-->
+    <color name="colorPrimarySelected">#1990ec</color>
+    <!--按钮不可点击颜色-->
+    <color name="colorPrimaryDisable">#bee2ff</color>
+
+    <!--上面是整体app主色，部分模块要有单独的主色。比如信用通模块主色为绿色-->
+    <!--app主色-蓝色-->
+    <color name="colorPrimaryGreen">#00a2ea</color>
+    <!--主色的文本颜色-->
+    <color name="colorPrimaryGreenText">#00a2ea</color>
+    <!--主色的控件颜色-->
+    <color name="colorPrimaryGreenWidget">#00a2ea</color>
+    <!--主色深一点的颜色-->
+    <color name="colorPrimaryGreenDark">#00a2ea</color>
+    <!--按钮选中颜色-->
+    <color name="colorPrimaryGreenSelected">#008fcf</color>
+    <!--按钮不可点击颜色-->
+    <color name="colorPrimaryGreenDisable">#b2e3f9</color>
+
+    <!--医疗主色-浅绿（和信用通的绿不同）-->
+    <color name="medColorPrimary">#02D7B4</color>
+    <!--主色的文本颜色-->
+    <color name="medColorPrimaryText">#02D7B4</color>
+    <!--主色的控件颜色-->
+    <color name="medColorPrimaryWidget">#02D7B4</color>
+    <!--主色深一点的颜色-->
+    <color name="medColorPrimaryDark">#02c8b4</color>
+    <!--按钮选中颜色-->
+    <color name="medColorPrimarySelected">#02c8b4</color>
+    <!--按钮不可点击颜色-->
+    <color name="medColorPrimaryDisable">#B3F3E8</color>
+
+    <!--分割线-->
+    <!--浅色分割线，用得最多的那种分割线-->
+    <color name="line_gray">#dfdfdf</color>
+    <!--深色分割线-->
+    <color name="line_gary_dark">#686868</color>
+
+
+    <!--填充色-->
+    <!--默认背景色-->
+    <color name="background_default">#f8f8f8</color>
+    <color name="background_gray_dark">#eeeeee</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_placeholder_gray">#f2f2f2</color>
+    <!--控件填充红色-->
+    <color name="color_widget_red">#F22424</color>
+    <color name="color_widget_red_dark">#cc0001</color>
+    <color name="color_widget_red_disable">#FBBDBD</color>
+    <!--通用阴影色-->
+    <color name="color_shade_popup_light">#22000000</color>
+    <color name="color_shade_popup_dark">#44000000</color>
+    <color name="ripple_item_layout">#15000000</color>
+
+
+    <!--字体颜色-->
+    <color name="text_black">#282828</color>
+    <color name="text_primary">#28a1ff</color>
+    <color name="text_default">#282828</color>
+    <color name="text_white">#ffffff</color>
+    <!--通用灰色 所有内容字体色值-->
+    <color name="text_gray">#999999</color>
+    <!--深灰色 次级标题，重要字体显示色值-->
+    <color name="text_gray_dark">#7c7c7c</color>
+    <!--提示的那种很浅的灰色-->
+    <color name="text_gray_hint">#CCCCCC</color>
+    <!--红色字，一般用于价格等，弃用，用下面的那个-->
+    <color name="text_red">#EE5019</color>
+    <color name="text_price_red">#f22424</color>
+    <!--橘色字-->
+    <color name="text_orange">#fc4c24</color>
+    <!--蓝色字-->
+    <color name="text_blue">#28a1ff</color>
+
+    <!--标准色，不可修改，不建议多用-->
+    <color name="color_transparent">#00000000</color>
+    <color name="color_transparent1">#05000000</color>
+    <color name="color_transparent2">#22000000</color>
+    <color name="color_transparent2_1">#44000000</color>
+    <color name="color_transparent2_2">#66000000</color>
+    <color name="color_transparent3">#88000000</color>
+    <color name="color_transparent5">#aa000000</color>
+    <color name="color_transparent4">#aaffffff</color>
+
+    <color name="color_gray_f2">#f2f2f2</color>
+    <color name="color_gray_e3">#e3e3e3</color>
+    <color name="color_gray_dd">#dddddd</color>
+    <color name="color_gray_c3">#c3c3c3</color>
+    <color name="color_gray_f6">#f6f6f6</color>
+    <color name="color_gray_f8">#f8f8f8</color>
+    <color name="color_fa">#FAFAFA</color>
+    <color name="color_orange">#E0FF6100</color>
+    <color name="color_textOrange">#ff8608</color>
+
+    <color name="color_black">#000000</color>
+
+
+    <!--以上基本为通用色值，以下为自定义色值-->
+    <!--自定义颜色-->
+    <color name="color_bar_grey">#393a3e</color>
+    <color name="color_sb_bg">#dfdfdf</color>
+
+    <!--通用FancyButton样式-->
+    <color name="fb_defaultColor">@color/colorPrimaryWidget</color>
+    <color name="fb_disabledColor">@color/colorPrimaryDisable</color>
+    <color name="fb_disabledTextColor">@color/text_white</color>
+    <color name="fb_focusColor">@color/colorPrimarySelected</color>
+    <color name="fb_textColor">@color/text_white</color>
+
+    <color name="fb_defaultColor_red">@color/color_widget_red</color>
+    <color name="fb_disabledColor_red">@color/color_widget_red_disable</color>
+    <color name="fb_focusColor_red">@color/color_widget_red_dark</color>
+
+
+    <!--扫描二维码页面配色-->
+    <color name="qr_border">#00A2EA</color>
+
+    <!--小点颜色值-->
+    <color name="point_green">#02D7B4</color>
+
+    <!--白色遮罩-->
+    <color name="shade_white">#ccffffff</color>
+</resources>

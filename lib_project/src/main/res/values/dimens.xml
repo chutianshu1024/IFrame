@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--控件大小-->
+    <!--底部导航栏高度-->
+    <dimen name="bottombar_height">48dp</dimen>
+    <!--顶部导航栏高度-->
+    <dimen name="toolbar_height">48dp</dimen>
+    <!--小导航高度-->
+    <dimen name="tab_height">40dp</dimen>
+    <!--通用按钮高度-->
+    <dimen name="layout_height_bt">46dp</dimen>
+    <!--item左侧小图标统一尺寸-->
+    <dimen name="widget_item_img_size">23dp</dimen>
+
+
+    <!--字体大小-->
+    <!--大导航标题字号-->
+    <dimen name="text_navigation">17sp</dimen>
+    <!--内容标题字号-->
+    <dimen name="text_title">16sp</dimen>
+    <!--通用内容字号，下面三个-->
+    <dimen name="text_content_large">15sp</dimen>
+    <dimen name="text_content">14sp</dimen>
+    <dimen name="text_content_small">13sp</dimen>
+
+    <!--底部提示小字-->
+    <dimen name="text_notes_bottom">12sp</dimen>
+
+    <!--一些小提示，或者小字体字号-->
+    <dimen name="text_normal">12sp</dimen>
+    <dimen name="text_small">11sp</dimen>
+    <dimen name="text_notes">10sp</dimen>
+    <dimen name="text_mini">8sp</dimen>
+
+    <!--价格字号-->
+    <dimen name="text_price_l">16sp</dimen>
+    <dimen name="text_price_xl">20sp</dimen>
+    <dimen name="text_price_xxl">25sp</dimen>
+
+    <!--通用按钮字号-->
+    <dimen name="text_bt_common">15dp</dimen>
+
+    <!--边距大小-->
+    <!--通用内边距-->
+    <dimen name="padding_common">15dp</dimen>
+    <!--右侧是小箭头时，边距要小一些-->
+    <dimen name="padding_common_right">10dp</dimen>
+    <!--内边距，小-->
+    <dimen name="padding_s">12dp</dimen>
+    <!--内边距，大-->
+    <dimen name="padding_l">18dp</dimen>
+
+    <!--通用外边距-->
+    <dimen name="margin_common">15dp</dimen>
+    <!--外边距用到的line，线要比文字多出1dp-->
+    <dimen name="margin_common_line">14dp</dimen>
+    <!--外边距，小-->
+    <dimen name="margin_s">12dp</dimen>
+    <!--外边距，大-->
+    <dimen name="margin_l">18dp</dimen>
+    <!--模块布局间的上边距-->
+    <dimen name="margin_layout_top">8dp</dimen>
+
+    <!--有阴影的外边距-->
+    <dimen name="margin_shadow_common">5dp</dimen>
+    <!--通用editText左边距-->
+    <dimen name="padleft_edit">8dp</dimen>
+
+
+    <!--布局大小-->
+    <!--通用item高度，这个一般为可点击或者比较大的展示型-->
+    <dimen name="layout_item_height">48dp</dimen>
+    <!--通用item高度，这个一般为文字展示列表-->
+    <dimen name="layout_item_height_s">40dp</dimen>
+    <!--底部菜单高度 （BottomMenuDialog）-->
+    <dimen name="layout_bottom_menu_height">50dp</dimen>
+
+
+    <!--通用控件尺寸-->
+    <!--item右侧的右箭头尺寸-->
+    <dimen name="size_right_next_icon">13dp</dimen>
+    <!--标题栏右侧图标尺寸,和边距。这两个配合使用，为了放大点击区域-->
+    <dimen name="size_topbar_right_icon">36dp</dimen>
+    <dimen name="size_topbar_right_icon_pad">8dp</dimen>
+
+    <!--下面试自定义边距，即非通用-->
+    <!--下面试自定义边距，即非通用-->
+    <!--下面试自定义边距，即非通用-->
+    <!--topbar返回按钮内边距-->
+    <dimen name="padding_backimg">12dp</dimen>
+    <dimen name="padding_rightimg">14dp</dimen>
+    <dimen name="padding_leftimg">10dp</dimen>
+    <dimen name="topbar_img_size">18dp</dimen>
+
+    <!--账单详情中，item的高度-->
+    <dimen name="layout_record_item_height">36dp</dimen>
+    <!--账单详情中，分割线的上下边距，配合上面的高度使用-->
+    <dimen name="layout_record_line_margin">8dp</dimen>
+
+    <dimen name="design_fab_size_normal" tools:ignore="PrivateResource">48dp</dimen>
+
+    <dimen name="textSize_sidebar">10sp</dimen>
+    <dimen name="large_textSize_sidebar">32sp</dimen>
+    <dimen name="textSize_sidebar_choose">12sp</dimen>
+    <dimen name="textSize_sidebar_padding">20sp</dimen>
+    <dimen name="radius_sidebar">20dp</dimen>
+    <dimen name="ball_radius_sidebar">24dp</dimen>
+
+    <dimen name="pay_ck_size">19dp</dimen>
+
+    <!--通用fb按钮-->
+    <dimen name="fb_radius">3dp</dimen>
+    <dimen name="fb_textSize">@dimen/text_bt_common</dimen>
+    <dimen name="fb_padding">1dp</dimen>
+</resources>

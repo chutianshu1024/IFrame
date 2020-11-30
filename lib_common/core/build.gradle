@@ -1,0 +1,52 @@
+apply from: "${rootProject.rootDir}/config.gradle"
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+def dependVersion = rootProject.ext.dependVersion
+
+android {
+    project.ext.setDefaultConfig project
+
+    defaultConfig {
+
+    }
+
+}
+
+//项目依赖
+dependencies {
+    //在项目中的libs中的所有的.jar结尾的文件，都是依赖
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //组件:把implementation 用api代替,它是对外部公开的, 所有其他的module就不需要添加该依赖
+    api "com.google.android.material:material:$dependVersion.material"
+    api "androidx.constraintlayout:constraintlayout:$dependVersion.constraintlayout"
+    api "androidx.core:core-ktx:$dependVersion.core_ktx"
+    api "androidx.appcompat:appcompat:$dependVersion.appcompat"
+    api "com.google.android.material:material:$dependVersion.material"
+    api "androidx.navigation:navigation-fragment-ktx:$dependVersion.navigation_fragment_ktx"
+    api "androidx.navigation:navigation-ui-ktx:$dependVersion.navigation_ui_ktx"
+
+    //MultiDex分包方法
+    api "androidx.multidex:multidex:$dependVersion.multidex"
+
+    //leakcanary-android
+    debugApi "com.squareup.leakcanary:leakcanary-android:$dependVersion.leakcanary"
+
+    //lifecycle
+    api "androidx.lifecycle:lifecycle-extensions:$dependVersion.lifecycle_extensions"
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:$dependVersion.lifecycle_extensions"
+
+    //kotlin协程
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:${dependVersion.kotlinx_coroutines}"
+
+    //事件
+    api "org.greenrobot:eventbus:$dependVersion.eventbus"
+    //EventBus的Subscriber Index对组件化不友好，暂时不加
+    //kapt "org.greenrobot:eventbus-annotation-processor:$dependVersion.eventbus"
+
+    //动态权限
+    api "pub.devrel:easypermissions:$dependVersion.easypermissions"
+
+}

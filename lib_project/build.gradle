@@ -1,0 +1,40 @@
+apply from: "${rootProject.rootDir}/config.gradle"
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+def dependVersion = rootProject.ext.dependVersion
+
+android {
+    project.ext.setDefaultConfig project
+}
+
+kapt {
+    generateStubs = true
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    //在项目中的libs中的所有的.jar结尾的文件，都是依赖
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api project(':lib_common:core')
+    api project(':lib_common:pay')
+
+    //解决输入法和表情切换导致闪烁问题
+    api project(':lib_others:smoothinputlayout')
+
+    //图片加载框架
+    api "com.github.bumptech.glide:glide:$dependVersion.glide"
+    kapt "com.github.bumptech.glide:compiler:$dependVersion.glide"
+    api "com.github.bumptech.glide:okhttp3-integration:$dependVersion.glide"
+
+    //浏览器腾讯x5内核
+    api 'com.tencent.tbs.tbssdk:sdk:43967'
+}

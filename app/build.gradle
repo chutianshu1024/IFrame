@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply from: "${rootProject.rootDir}/config.gradle"
+
+android {
+    //调动config.gradle配置
+    project.ext.setDefaultConfig project
+
+    buildTypes {
+//        debug {
+//            //是否进行混淆
+//            minifyEnabled false
+//            // 混淆文件的位置
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            //配置签名文件
+//            signingConfig signingConfigs.release
+//        }
+//        release {
+//            minifyEnabled false
+//            //是否清理无用资源,依赖于minifyEnabled
+//            shrinkResources false
+//            //是否启用zipAlign压缩
+//            zipAlignEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            //配置签名文件
+//            signingConfig signingConfigs.release
+//            //配置apk路径
+//            //            applicationVariants.all { variant ->
+//            //                def buildType = variant.buildType.name
+//            //                if (buildType == 'release') {
+//            //                    variant.getPackageApplication().outputDirectory = new File(rootProject.rootDir, "release")
+//            //                    // variant.getPackageApplication().outputDirectory = new File("F:/apk/frameDemoApk","releaseApk")
+//            //
+//            //                    variant.outputs.each { output ->
+//            //                        def outputFile = output.outputFile
+//            //                        if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//            //                            // 输出apk名称为XXX20160328_v1.0.0_vc10_XXXX_test.apk
+//            //                            def fileName = "frame_${releaseTime()}_v${rootProject.ext.versionName}.apk"
+//            //                            //  output.outputFile 改为 outputFileName
+//            //                            output.apkData.outputFileName = fileName
+//            //                        }
+//            //                    }
+//            //                }
+//            //            }
+//        }
+    }
+}
+
+kapt {
+    generateStubs = true
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+dependencies {
+    project.ext.arouterDepend project
+
+    api project(':lib_project')
+
+    //是否模块独立运行
+    if (!Boolean.valueOf(rootProject.ext.moduleTest1IsAlone)) {
+        implementation project(':module_test1')
+    }
+    if (!Boolean.valueOf(rootProject.ext.moduleTest2IsAlone)) {
+        implementation project(':module_test2')
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

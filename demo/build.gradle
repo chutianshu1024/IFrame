@@ -1,0 +1,23 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply from: "${rootProject.rootDir}/config.gradle"
+
+android {
+    //调动config.gradle配置
+    project.ext.setDefaultConfig project
+}
+
+kapt {
+    generateStubs = true
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+dependencies {
+    project.ext.arouterDepend project
+
+    api project(':lib_common:core')
+
+}

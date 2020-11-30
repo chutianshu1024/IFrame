@@ -1,0 +1,13 @@
+rootProject.name = "IFrame"
+//基础库
+include ':lib_common:core', ':lib_common:ihttp', ':lib_common:pay', ':lib_common:iwebview'
+//项目库
+include ':lib_project'
+//三方库
+include ':lib_others:smoothinputlayout'
+//壳和demo
+include ':demo', ':app'
+//模块
+include ':module_test1', ':module_test2'
+//其他
+include ':X5WebDemo'
