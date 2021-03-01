@@ -59,5 +59,4 @@ class MainActivity : BaseActivity() {
         binding.forumContext.loadUrl("https://h5.static.txxtxx.cn/taskCenter/taskBoy.html?uid=1744390&token=84b3ce9cd64c7221a107b8f2565a6078")
     }
 
-
 }
