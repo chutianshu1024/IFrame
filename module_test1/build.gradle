@@ -41,7 +41,6 @@ kapt {
 dependencies {
     project.ext.arouterDepend project
 
-    api project(':lib_common:core')
     api project(':lib_project')
 
 }

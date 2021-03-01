@@ -37,4 +37,13 @@ dependencies {
 
     //浏览器腾讯x5内核
     api 'com.tencent.tbs.tbssdk:sdk:43967'
+
+    //google官方orm框架room
+    implementation "androidx.room:room-runtime:${dependVersion.room_version}"
+    kapt "androidx.room:room-compiler:${dependVersion.room_version}"
+    annotationProcessor "androidx.room:room-compiler:${dependVersion.room_version}"
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-ktx:${dependVersion.room_version}"
+    // optional - Test helpers
+    testImplementation "androidx.room:room-testing:${dependVersion.room_version}"
 }

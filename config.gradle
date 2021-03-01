@@ -118,6 +118,7 @@ ext {
             appcompat              : "1.2.0",
             navigation_fragment_ktx: "2.3.1",
             navigation_ui_ktx      : "2.3.1",
+            room_version           : "2.2.5",
 
             //协程
             kotlinx_coroutines     : "1.4.1",

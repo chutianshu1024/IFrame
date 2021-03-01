@@ -6,9 +6,11 @@ import android.os.Build.VERSION_CODES
 import android.util.AttributeSet
 import android.view.View
 import android.widget.Toast
+import com.tencent.smtt.export.external.interfaces.WebResourceRequest
 import com.tencent.smtt.sdk.WebChromeClient
 import com.tencent.smtt.sdk.WebSettings
 import com.tencent.smtt.sdk.WebView
+import com.tencent.smtt.sdk.WebViewClient
 
 /**
  * @Description: 项目用到的webView ，现在使用的腾讯x5内核
@@ -106,6 +108,7 @@ class IWebView @JvmOverloads constructor(
                 return true
             }
         })
+
     }
 
     /**
